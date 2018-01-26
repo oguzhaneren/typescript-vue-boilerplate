@@ -1,0 +1,16 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+     "files.exclude": {
+         "node_modules":true,
+         ".gitattributes":true,
+        "package-lock.json":true,
+        "dist":true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/*.js.map": true,
+        "test/unit/coverage":true,
+        "test/e2e/reports/":true,
+    },
+    "tslint.typeCheck": true, 
+    "prettier.printWidth": 80,
+}

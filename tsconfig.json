@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "types": [
+      "jest",
+      "node",
+      "vue",
+      "bluebird",
+      "lodash"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/vue/types",
+      "./src/"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}
