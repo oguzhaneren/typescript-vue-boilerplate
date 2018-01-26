@@ -14,7 +14,7 @@ import router from './router';
 
 
 
-Vue.config.productionTip = false;
+Vue.config.productionTip =  process.env.NODE_ENV === 'production';
 
 
 // tslint:disable-next-line:no-unused-expression

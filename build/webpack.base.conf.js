@@ -31,8 +31,7 @@ module.exports = {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production' ?
-      config.build.assetsPublicPath :
-      config.dev.assetsPublicPath
+      config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.vue', '.js', '.ts', '.json'],
@@ -47,10 +46,10 @@ module.exports = {
   plugins: [
     new ForkTsCheckerWebpackPlugin({
       vue: true,
-      tsconfig:path.resolve("tsconfig.json"),
+      tsconfig: path.resolve("tsconfig.json"),
       diagnosticFormatter: "ts-loader",
       skipLibCheck: true,
-      tslint: config.dev.useTslint ?  path.resolve("tslint.json") : false,
+      tslint: config.dev.useTslint ? path.resolve("tslint.json") : false,
       watch: './src' // optional but improves performance (less stat calls)
     })
   ],
@@ -82,7 +81,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          name: utils.assetsPath('img/[name].[hash:7].[ext]'),
+          fallback:"file-loader"
         }
       },
       {
@@ -100,7 +100,15 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+
+      // {
+      //   test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: utils.assetsPath('img/[name].[hash:7].[ext]'),
+      //   }
+      // }
     ]
   },
   node: {
