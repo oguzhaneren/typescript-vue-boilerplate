@@ -27,4 +27,4 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://toilal.github.io/vue-webpack-template/).
+[Template](https://github.com/Toilal/vue-webpack-template)
